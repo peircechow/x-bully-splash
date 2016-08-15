@@ -122,8 +122,7 @@ class GetResponse(webapp2.RequestHandler): #this gets the response fron user inp
 				#the above reading of files has been placed at the top
 				
 				bot_resp = respond(user.nickname(),user_resp)
-				if user_resp.lower() == "allahu akbar":
-					bot_resp = "Like a somebodee fuq u bitch!"
+
 					
 				b = Log()
 				b.message = bot_resp
