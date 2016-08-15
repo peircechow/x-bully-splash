@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>	
+{% autoescape true %}	
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" ></script>
+		<script>
+		<!-- 	<!--$(document).ready(function(){
+$(document).ready(function(){
+	$("#msg").append('<div style="background-color:#EEEEEE" id = "scrollhere2">{{bot_msg}}</div><br>');
+	$('#msg').animate({
+        scrollTop: $("#scrollhere2").offset().top }, 1);<!-- (to scroll all the way down)-->
+	
+    $("button").click(function(){	
+	
+		$("#avail").text("typing...");
+		$("ol").append("<li>"+$("#test").val()+"</li>");
+		$("#msg").append('<div style="background-color:#3EFA00" id = "scrollhere">'+$("#user_resp").val()+"</div><br>");
+		$('#msg').animate({scrollTop: 100 * $("#scrollhere").offset().top }, 1);
+	});
+});
+		</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-81717130-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	</head>
+
+	<body>
+	<p>Name: <input type="text" id="test" value="Mickey Mouse"></p>
+<ol>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ol>
+<button>Show Value</button>
+		
+		<p><a href="{{url}}">{{url_linktext}}</a></p>
+		
+			<div id="qotd" style="opacity:0.9">
+				<h1 id="ellis">Ellis</h1>
+				<h2 id="avail"> Available </h2>
+				<div style = "background-color:#cbcbcb;width:320px;height:320px;overflow:scroll;" id="msg">
+				(text goes here)
+				{% for obj in objs %}
+					{% if obj.bot %}
+						<div style="background-color:#FFFFFF">{{obj.message}}</div><br>
+					{% elif obj.human %}
+						<div style="background-color:#3EFA00">{{obj.message}}</div><br>
+					{% endif %}
+				{%endfor%}
+					<!--<div style="background-color:#cccccc" id="scrollhere2">{{bot_msg}}</div><br> I already wrote this using jQuery append-->
+				</div>
+				
+				
+				<div id="ques">
+				<!-- here will be the questions, loaded randomly from somewhere(done below)-->
+				<form action="/check" method="post">
+				
+						<p style="text-align:left">Message:</p>
+						<input type="text" name="user_input" style="width:100%;font-size:18pt;" id="user_resp"><br>
+						<button type="submit" value="Submit"> SEND </button>
+						
+				</form>
+				</div>
+			</div>
+		
+		</body>
+</html>
+{% endautoescape %}

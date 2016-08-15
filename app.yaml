@@ -1,0 +1,39 @@
+application: x-bully
+version: 2
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+ 
+- url: /bot_files
+  static_dir: bot_files
+  
+- url: /css
+  static_dir: css
+  
+- url: /images
+  static_dir: images
+  
+- url: /audio
+  static_dir: audio
+  
+- url: /bot_files
+  static_dir: bot_files
+  
+- url: .*
+  script: main.app
+  
+  
+
+  
+
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest

@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./css/stylesheet.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		var originalText = $("#calling").text(),
+		i  = 0;
+		setInterval(function() {
+
+			$("#calling").append(".");
+			i++;
+    
+			if(i == 4){
+				$("#calling").html(originalText);
+				i = 0;
+			}
+		}, 500);
+	});
+</script>
+	<title>XBully/calling</title>
+</head>
+<body id="transparent">
+	<!--<div>
+		<button type="button" class="btn btn-default btn-lg" id="icons">
+			<span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span>
+		</button>
+	</div>-->
+	<!-- <audio controls>
+		<source src="ring.mp3" type="audio/mpeg">
+	</audio>
+ --><h1 id="calling" >Calling</h1>
+ 
+	<audio autoplay>
+		<source src="./audio/ring.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+	</audio>
+	<div>
+		<button type="button" class="btn btn-default btn-lg" id="keypad">
+			<span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+		</button>
+	</div>
+	<div>
+		<button type="button" class="btn btn-default btn-lg" id="volume">
+			<span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span>
+		</button>
+	</div>
+	<div>
+		<button type="button" class="btn btn-default btn-lg" id="plus">
+			<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+		</button>
+	</div>
+	<div>
+		<button type="button" class="btn btn-default btn-lg" id="videocall">
+			<span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span>
+		</button>
+	</div>
+	<div>
+		<button type="button" class="btn btn-default btn-lg" id="person">
+			<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+		</button>
+	</div>
+	<div>
+		<a href="profile">
+		<button type="button" class="btn btn-default btn-lg" id="endcall">
+			<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+		</button>
+		</a>
+	</div>
+</body>
+</head>
+</html>
+

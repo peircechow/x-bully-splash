@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+
+
+        
+<category><pattern> * SAD</pattern><template>Why do you feel sad? <srai>BULLIED</srai></template></category>
+<category><pattern> SAD</pattern><template>Why do you feel sad? Would you like to share what happened to you?</template></category>
+
+	<category><pattern>I * BULLIED</pattern><template><srai>BULLIED</srai></template></category>
+	<category><pattern>BEING BULLIED</pattern><template><srai>BULLIED</srai></template></category>
+	<category><pattern>BULLIED ME *</pattern><template><srai>BULLIED</srai></template></category>
+	<category><pattern>BULLIED</pattern><template>Would you like to share with me what happened to you?</template></category>
+
+		<category><pattern>NO</pattern><that>*  WHAT HAPPENED TO YOU</that><template>Are you sure? I think it is better for you to share it with me, so that I can help you :) </template></category>
+		<category><pattern>NO *</pattern><that>* WHAT HAPPENED TO YOU</that><template><srai>NO</srai></template></category>
+		<category><pattern>* dun want</pattern><that>* WHAT HAPPENED TO YOU</that><template><srai>NO</srai></template></category>
+		<category><pattern>* dont want</pattern><that>* WHAT HAPPENED TO YOU</that><template><srai>NO</srai></template></category>
+		<category><pattern>* dun wan</pattern><that>* WHAT HAPPENED TO YOU</that><template><srai>NO</srai></template></category>
+		<category><pattern>* dont want</pattern><that>* WHAT HAPPENED TO YOU</that><template><srai>NO</srai></template></category>
+
+			<category><pattern>YES *</pattern><that>ARE YOU SURE *</that><template>Alright then. Remember that I will always be here for you :)</template></category>
+			<category><pattern>YES </pattern><that>ARE YOU SURE *</that><template>Alright then. Remember that I will always be here for you :)</template></category>
+				
+			<category><pattern>NO </pattern><that>ARE YOU SURE *</that><template>So, <srai>BULLIED</srai></template></category>
+			<category><pattern>NO *</pattern><that>ARE YOU SURE *</that><template>So, <srai>BULLIED</srai></template></category>
+
+		<category><pattern>YES</pattern><that>* WHAT HAPPENED TO YOU</that><template>Don't be worried. I am here to listen to what happened to you.</template></category>
+		<category><pattern>YES *</pattern><that>* WHAT HAPPENED TO YOU</that><template><srai>YES</srai></template></category>
+		
+        
+		<category><pattern>*</pattern><that>* WHAT HAPPENED TO YOU</that><template>Oh that sounds really bad. Is he your friend?</template></category>
+
+
+			<category><pattern>YES</pattern><that>* IS HE YOUR FRIEND</that><template>It seems that this bullying is rather severe. Is your safety being compromised?</template></category>        
+			<category><pattern>YES *</pattern><that>* IS HE YOUR FRIEND</that><template><srai>YES</srai></template></category>
+			<category><pattern>* YES </pattern><that>* IS HE YOUR FRIEND</that><template><srai>YES</srai></template></category>
+
+				<category><pattern>* YES</pattern><that> * IS YOUR SAFETY BEING COMPROMISED</that><template><srai>YES</srai></template></category>
+				<category><pattern>YES *</pattern><that> * IS YOUR SAFETY BEING COMPROMISED</that><template><srai>YES</srai></template></category>
+				<category><pattern>YES</pattern><that> * IS YOUR SAFETY BEING COMPROMISED</that><template>Do you still want to stay in this relationship?</template></category>
+				
+					<category><pattern> NO *</pattern><that>DO YOU STILL WANT TO STAY IN THIS RELATIONSHIP</that><template><srai>NO</srai></template></category>
+					<category><pattern>* NO </pattern><that>DO YOU STILL WANT TO STAY IN THIS RELATIONSHIP</that><template><srai>NO</srai></template></category>
+					<category><pattern> NO </pattern><that>DO YOU STILL WANT TO STAY IN THIS RELATIONSHIP</that><template>In that case, perhaps you can try walking away from him :) Do not be suppressed by his actions. Stay strong and move on ! :D</template></category>
+
+
+					<category><pattern>NOT SURE</pattern><that>DO YOU STILL WANT TO STAY IN THIS RELATIONSHIP</that><template>In that case, I strongly encourage you to stay away from him. Safety is number one, and this comes before anything else. Do not be suppressed by his actions. Stay strong and move on ! :D</template></category>							
+					<category><pattern>* NOT * SURE *</pattern><that>DO YOU STILL WANT TO STAY IN THIS RELATIONSHIP</that><template><srai>NOT SURE</srai></template></category>
+					<category><pattern>* NOT SURE </pattern><that>DO YOU STILL WANT TO STAY IN THIS RELATIONSHIP</that><template><srai>NOT SURE</srai></template></category>
+					<category><pattern> NOT SURE * </pattern><that>DO YOU STILL WANT TO STAY IN THIS RELATIONSHIP</that><template><srai>NOT SURE</srai></template></category>
+					<category><pattern> NOT * SURE * </pattern><that>DO YOU STILL WANT TO STAY IN THIS RELATIONSHIP</that><template><srai>NOT SURE</srai></template></category>
+					<category><pattern>IDK LEH</pattern><that>DO YOU STILL WANT TO STAY IN THIS RELATIONSHIP</that><template><srai>NOT SURE</srai></template></category>
+					<category><pattern>IDK *</pattern><that>DO YOU STILL WANT TO STAY IN THIS RELATIONSHIP</that><template><srai>NOT SURE</srai></template></category>
+
+
+        
+					<category><pattern>YES *</pattern><that>DO YOU STILL WANT TO STAY IN THIS RELATIONSHIP</that><template>Oh I see... what value do you see in this relationship?</template></category>
+					<category><pattern>YES </pattern><that>DO YOU STILL WANT TO STAY IN THIS RELATIONSHIP</that><template>Oh I see... what value do you see in this relationship?</template></category>
+					
+						<category><pattern>NOTHING</pattern><that>* WHAT VALUE DO YOU SEE IN THIS RELATIONSHIP</that><template>In that case, I guess it isn't worth to countinue this relationship. <srai>STOP RELATIONSHIP</srai></template></category>
+						<category><pattern>NOTHING *</pattern><that>* WHAT VALUE DO YOU SEE IN THIS RELATIONSHIP</that><template><srai>NOTHING</srai></template></category>
+						<category><pattern>* NOTHING</pattern><that>* WHAT VALUE DO YOU SEE IN THIS RELATIONSHIP</that><template><srai>NOTHING</srai></template></category>
+						<category><pattern>*NOT MUCH</pattern><that>* WHAT VALUE DO YOU SEE IN THIS RELATIONSHIP</that><template><srai>NOTHING</srai></template></category>
+						<category><pattern>NOT MUCH *</pattern><that>* WHAT VALUE DO YOU SEE IN THIS RELATIONSHIP</that><template><srai>NOTHING</srai></template></category>
+								
+						
+						
+						<category><pattern>*</pattern><that>* WHAT VALUE DO YOU SEE IN THIS RELATIONSHIP</that><template>I understand that you truly value your friendship a lot. However, you still need to remember that your safety is being compromised. Do you think it is worth it?</template></category>
+							
+							<category><pattern> YES </pattern><that>* DO YOU THINK IT IS WORTH IT</that><template>Hmm... In that case I advise you to seek help from your school counsellor, as your safety is being compromised. Remember that behind every grey cloud, there will always be a blue sky. Cheer up :)</template></category>
+							<category><pattern> YES *</pattern><that>* DO YOU THINK IT IS WORTH IT</that><template><srai>YES</srai></template></category>
+							<category><pattern>* YES </pattern><that>* DO YOU THINK IT IS WORTH IT</that><template><srai>YES</srai></template></category>					
+	
+							<category><pattern>NO</pattern><that>* DO YOU THINK IT IS WORTH IT</that><template>Yes, that's what I think so too. It isn't worth it to continue this relationship. Perhaps you can try walking away from him :) Do not be suppressed by his actions. Stay strong and move on ! :D</template></category>
+							<category><pattern>NO *</pattern><that>* DO YOU THINK IT IS WORTH IT</that><template><srai>NO</srai></template></category>					
+							<category><pattern>* NO</pattern><that>* DO YOU THINK IT IS WORTH IT</that><template><srai>NO</srai></template></category>					
+
+				<category><pattern> NO </pattern><that>* IS YOUR SAFETY BEING COMPROMISED</that><template>In that case, do you still want to continue the relationship with him?</template></category>
+				<category><pattern>* NO </pattern><that>* IS YOUR SAFETY BEING COMPROMISED</that><template><srai>NO</srai></template></category>
+				<category><pattern> NO *</pattern><that>* IS YOUR SAFETY BEING COMPROMISED</that><template><srai>NO</srai></template></category>
+
+					<category><pattern>CONTINUE RELATIONSHIP</pattern><template>I can advise you to approach him with the I-Message method, making you more assertive. "I feel (emotion) when you (action). I want (what you want him to do)". In this way, you will feel more assertive and be able to stand up for yourself :)</template></category>
+					<category><pattern> YES </pattern><that>IN THAT CASE, DO YOU STILL WANT TO CONTINUE THE RELATIONSHIP WITH HIM</that><template>I can advise you to approach him with the I-Message method, making you more assertive. "I feel (emotion) when you (action). I want (what you want him to do)". In this way, you will feel more assertive and be able to stand up for yourself :)</template></category>
+					<category><pattern>* YES </pattern><template><srai>CONTINUE RELATIONSHIP</srai></template></category>
+					<category><pattern> YES *</pattern><template><srai>CONTINUE RELATIONSHIP</srai></template></category>
+					
+					
+					<category><pattern>STOP RELATIONSHIP</pattern><template>I'm glad you've made up your mind. Perhaps you can try walking away from him :) Do not be suppressed by his actions. Stay strong and move on ! :D</template></category>					
+					<category><pattern> NO </pattern><that>IN THAT CASE, DO YOU STILL WANT TO CONTINUE THE RELATIONSHIP WITH HIM</that><template><srai>STOP RELATIONSHIP</srai></template></category>
+					<category><pattern> NO *</pattern><that>IN THAT CASE, DO YOU STILL WANT TO CONTINUE THE RELATIONSHIP WITH HIM</that><template><srai>STOP RELATIONSHIP</srai></template></category>
+					<category><pattern>* NO </pattern><that>IN THAT CASE, DO YOU STILL WANT TO CONTINUE THE RELATIONSHIP WITH HIM</that><template><srai>STOP RELATIONSHIP</srai></template></category>
+					
+					<category><pattern>*</pattern><template>Sorry, let me rephrase my question. Do you want to stop or continue the relationship?</template></category>		
+					
+						<category><pattern>STOP</pattern><that>* STOP OR CONTINUE *</that><template><srai>STOP RELATIONSHIP</srai></template></category>
+						<category><pattern>* STOP</pattern><that>* STOP OR CONTINUE *</that><template><srai>STOP RELATIONSHIP</srai></template></category>	
+						<category><pattern>* STOP *</pattern><that>* STOP OR CONTINUE *</that><template><srai>STOP RELATIONSHIP</srai></template></category>
+						<category><pattern> STOP *</pattern><that>* STOP OR CONTINUE *</that><template><srai>STOP RELATIONSHIP</srai></template></category>
+						
+						<category><pattern>CONTINUE</pattern><that>* STOP OR CONTINUE *</that><template><srai>CONTINUE RELATIONSHIP</srai></template></category>					
+						<category><pattern>* CONTINUE</pattern><that>* STOP OR CONTINUE *</that><template><srai>CONTINUE RELATIONSHIP</srai></template></category>					
+						<category><pattern>CONTINUE *</pattern><that>* STOP OR CONTINUE *</that><template><srai>CONTINUE RELATIONSHIP</srai></template></category>					
+						<category><pattern>* CONTINUE *</pattern><that>* STOP OR CONTINUE *</that><template><srai>CONTINUE RELATIONSHIP</srai></template></category>					
+						
+			<category><pattern>NO</pattern><that>* IS HE YOUR FRIEND</that><template>Hmm... I guess it's best for you to report the matter to the school or the authorities.</template></category>        
+			<category><pattern>NO *</pattern><that>* IS HE YOUR FRIEND</that><template><srai>NO</srai></template></category>        
+			<category><pattern>* NO</pattern><that>* IS HE YOUR FRIEND</that><template><srai>NO</srai></template></category>        
+			<category><pattern>STRANGER *</pattern><that>* IS HE YOUR FRIEND</that><template><srai>NO</srai></template></category>        
+			<category><pattern>* STRANGER</pattern><that>* IS HE YOUR FRIEND</that><template><srai>NO</srai></template></category>        
+
+				
+        
+
+
+
+        
+
+
+
+        
+<category><pattern>* NOT * SURE *</pattern><template>Alright, take your time. You can let me know when you have decided :)</template></category>
+<category><pattern>* NOT SURE </pattern><template>Alright, take your time. You can let me know when you have decided :)</template></category>
+<category><pattern> NOT SURE </pattern><template>Alright, take your time. You can let me know when you have decided :)</template></category>
+
+
+<category><pattern>SAFETY COMPROMISED</pattern><template>Do you still want to stay in this relationship?</template></category> 
+<category><pattern>* SAFETY IS BEING COMPROMISED</pattern><template><srai>SAFETY COMPROMISED</srai></template></category>
+
+
+        
+<category><pattern> POSTED ONLINE PICTURES </pattern><template>It seems that this bullying is rather severe. Is your safety being compromised?</template></category>
+<category><pattern>* POSTED ONLINE PICTURES *</pattern><template>It seems that this bullying is rather severe. Is your safety being compromised?</template></category>
+<category><pattern>* POSTED ONLINE PICTURES </pattern><template>It seems that this bullying is rather severe. Is your safety being compromised?</template></category>
+<category><pattern> POSTED ONLINE PICTURES *</pattern><template>It seems that this bullying is rather severe. Is your safety being compromised?</template></category>
+
+
+<!-- GENERAL GREETINGS -->
+        
+<category><pattern>HI</pattern><template>Hello <get name="name"/>. How are you?</template></category>        
+<category><pattern>HI I AM *</pattern><template>Hello <set name="name"><star/></set>. How are you?</template></category>        
+<category><pattern>HELLO</pattern><template><srai>Hi</srai></template></category>
+<category><pattern>HELLO *</pattern><template><srai>Hi</srai></template></category>
+
+<category><pattern>FINE</pattern><template>Glad that you are doing well, <get name="name"/></template></category>        
+<category><pattern>* FINE</pattern><template><srai>FINE</srai></template></category>        
+<category><pattern>FINE *</pattern><template><srai>FINE</srai></template></category> 
+<category><pattern>GOOD *</pattern><template><srai>FINE</srai></template></category> 
+<category><pattern>* GOOD</pattern><template><srai>FINE</srai></template></category> 
+<category><pattern>* GREAT</pattern><template><srai>FINE</srai></template></category> 
+
+<category><pattern>ABOUT YOU</pattern><template>I'm doing great. Thanks for the concern :)</template></category> 
+<category><pattern>* ABOUT YOU</pattern><template><srai>ABOUT YOU</srai></template></category> 
+<category><pattern>* ABOUT YOU</pattern><template><srai>ABOUT YOU</srai></template></category> 
+      
+<category><pattern>ABOUT YOURSELF</pattern><template>My name is Ellis, and I'm a counsellor :)</template></category> 
+<category><pattern>* ABOUT YOURSELF</pattern><template><srai>ABOUT YOURSELF</srai></template></category> 
+
+<category><pattern>CREATED YOU</pattern><template>I was made by Peirce Chow Zheng Jie, Koh Yi Ting and Ng Teng Guan Gary</template></category> 
+<category><pattern>* CREATED YOU</pattern><template><srai>FINE</srai></template></category> 
+
+
+<category><pattern>THANK YOU</pattern>
+<template>
+	<random> 
+	<li>My pleasure,<get name="name"/> :)</li>
+	<li>You're most welcomed :)</li>
+	<li>I'm glad that I'm able to help you. Please feel free to talk to me anytime :D </li>
+	</random>
+</template>
+</category>        
+<category><pattern>TY</pattern><template><srai>THANK YOU</srai></template></category>
+<category><pattern>TY *</pattern><template><srai>THANK YOU</srai></template></category>
+<category><pattern>THANK *</pattern><template><srai>THANK YOU</srai></template></category>
+<category><pattern>* THANK *</pattern><template><srai>THANK YOU</srai></template></category>
+<category><pattern>* THANK </pattern><template><srai>THANK YOU</srai></template></category>
+<category><pattern>THANKS * </pattern><template><srai>THANK YOU</srai></template></category>
+<category><pattern>THANKS  </pattern><template><srai>THANK YOU</srai></template></category>
+<category><pattern>XIE XIE </pattern><template><srai>THANK YOU</srai></template></category>
+<category><pattern>SAN Q </pattern><template><srai>THANK YOU</srai></template></category>
+
+<category><pattern>QUOTE</pattern>
+<template>
+	<random> 
+	<li>It is during our darkest moments that we must focus to see the light.</li>
+	<li>Be not afraid of life. Believe that life is worth living, and your belief will help create the fact.</li>
+	<li>There are two ways of spreading light: to be the candle or the mirror that reflects it.</li>
+	<li>The world is full of magical things patiently waiting for our wits to grow sharper.</li>
+	<li>Believe you can and you're halfway there.</li>	
+	<li>Out of difficulties grow miracles.</li>
+	</random>
+</template>
+</category> 
+
+<category><pattern>*</pattern>
+<template>
+	<random> 
+	<li>Sorry, I'm not sure what do you mean by that</li>
+	<li><srai>QUOTE</srai></li>
+	<li>Perhaps you can phrase it in a different way?</li>
+	<li>Sorry, that wasn't clear enough</li>
+	<li>Sorry, I didnt quite catch that</li>
+	<li>I don't follow</li>	
+	</random>
+</template>
+</category>
+</aiml>
