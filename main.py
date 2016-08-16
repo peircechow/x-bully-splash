@@ -41,6 +41,7 @@ autoescape=True)
 
 users_arr = []
 bots = []
+triggers=["die","dying","suicide","suicidal","kill","killing"]
 
 class User():
     def __init__(self,name,position):
@@ -120,10 +121,11 @@ class GetResponse(webapp2.RequestHandler): #this gets the response fron user inp
 				#kernel.learn("std-startup.xml")
 				#kernel.respond("load aiml b")
 				#the above reading of files has been placed at the top
-				
 				bot_resp = respond(user.nickname(),user_resp)
-				if user_resp.lower() == "allahu akbar":
-					bot_resp = "Like a somebodee fuq u bitch!"
+				for trigger in triggers:
+					if trigger in user_resp:
+						bot_resp="I feel that your safety is being compromised, please speak to a counsellor"
+						
 					
 				b = Log()
 				b.message = bot_resp
@@ -135,15 +137,17 @@ class GetResponse(webapp2.RequestHandler): #this gets the response fron user inp
 				
 				time.sleep(1) #add some delay to demonstrate that the bot is "thinking"
 							  #maybe we can randomise inthe future based on the length of the response
-				self.redirect('/profile')
+				if bot_resp=="I feel that your safety is being compromised, please speak to a counsellor":
+					self.redirect('/call')
+				else:
+					self.redirect('/profile')
 			
 			else:
 				self.redirect('/profile')
 		
 		else:
 			self.redirect(users.create_login_url(self.request.uri))
-			if users.get_current_user():
-				self.redirect('/profile')
+
 				
 				
 class Bully(webapp2.RequestHandler):
@@ -234,7 +238,9 @@ class Profile(webapp2.RequestHandler):
 				n.name = user.nickname()
 				n.put()
 				
-				
+			# if bot_msg=="I feel that your safety is being compromised, please speak with our counsellor":
+				# time.sleep(1)
+				# self.redirect('/call')	
 		else:
 			url = users.create_login_url(self.request.uri)
 			url_linktext = 'Login'	
