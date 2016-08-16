@@ -122,10 +122,10 @@ class GetResponse(webapp2.RequestHandler): #this gets the response fron user inp
 				#kernel.respond("load aiml b")
 				#the above reading of files has been placed at the top
 				bot_resp = respond(user.nickname(),user_resp)
+
 				for trigger in triggers:
 					if trigger in user_resp:
 						bot_resp="I feel that your safety is being compromised, please speak to a counsellor"
-						
 					
 				b = Log()
 				b.message = bot_resp
