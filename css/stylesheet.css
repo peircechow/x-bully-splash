@@ -121,7 +121,18 @@
 	font-style:oblique;
 }
 #quote{
-	font-style:italic;
+	font-family: 'Cookie', cursive;
+	font-size:2em;
+	margin-left:1%;
+	margin-right:50%;
+	color:white;
+}
+#author{
+	font-family: 'Cookie', cursive;
+	font-size:20px;
+	color:white;
+	float:right;
+	margin-right:5%;
 }
 #msg {
 	padding: 15px 15px 15px 15px; /* top right bottom left */
@@ -164,15 +175,20 @@
 	margin-top:50px;
 	margin-bottom:30px;
 }
-#author{
-	font-weight:bold;
-}
 .story{
 	border-width:1px;
 	border-color:#4d4d4d ;
 	border-style:solid;
 	padding:3px 5px 3px 5px;
 	margin-bottom:13px;
+}
+
+#quote-light{
+	background-color:black;
+	background-image:url("light.jpg");
+	background-repeat: no-repeat;
+	padding-top:10px;
+	min-height:800px;	
 }
 .scope-it{
 	padding-top:10px;

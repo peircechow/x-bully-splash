@@ -151,13 +151,16 @@
 
 <category><pattern>ABOUT YOU</pattern><template>I'm doing great. Thanks for the concern :)</template></category> 
 <category><pattern>* ABOUT YOU</pattern><template><srai>ABOUT YOU</srai></template></category> 
-<category><pattern>* ABOUT YOU</pattern><template><srai>ABOUT YOU</srai></template></category> 
+<category><pattern>* ABOUT YOU *</pattern><template><srai>ABOUT YOU</srai></template></category> 
+<category><pattern>HOW ARE YOU</pattern><template><srai>ABOUT YOU</srai></template></category> 
+<category><pattern>HOW ARE YOU *</pattern><template><srai>ABOUT YOU</srai></template></category> 
       
 <category><pattern>ABOUT YOURSELF</pattern><template>My name is Ellis, and I'm a counsellor :)</template></category> 
 <category><pattern>* ABOUT YOURSELF</pattern><template><srai>ABOUT YOURSELF</srai></template></category> 
+<category><pattern>WHO ARE YOU</pattern><template><srai>ABOUT YOURSELF</srai></template></category> 
 
 <category><pattern>CREATED YOU</pattern><template>I was made by Peirce Chow Zheng Jie, Koh Yi Ting and Ng Teng Guan Gary</template></category> 
-<category><pattern>* CREATED YOU</pattern><template><srai>FINE</srai></template></category> 
+<category><pattern>* CREATED YOU</pattern><template><srai>CREATED YOU</srai></template></category> 
 
 
 <category><pattern>THANK YOU</pattern>
@@ -178,6 +181,9 @@
 <category><pattern>THANKS  </pattern><template><srai>THANK YOU</srai></template></category>
 <category><pattern>XIE XIE </pattern><template><srai>THANK YOU</srai></template></category>
 <category><pattern>SAN Q </pattern><template><srai>THANK YOU</srai></template></category>
+
+<category><pattern>* QUOTE</pattern><template><srai>QUOTE</srai></template></category>
+<category><pattern>QUOTE *</pattern><template><srai>QUOTE</srai></template></category>
 
 <category><pattern>QUOTE</pattern>
 <template>
