@@ -9,7 +9,7 @@ Load standard AIML set
 
 <learn>ellis.aiml</learn> 
 
-<!-- <learn>aiml_files/std-65percent.aiml</learn>
+<!-- s<learn>aiml_files/std-65percent.aiml</learn>
 <learn>aiml_files/std-atomic.aiml</learn>
 <learn>aiml_files/std-botmaster.aiml</learn>
 <learn>aiml_files/std-brain.aiml</learn>

@@ -42,6 +42,9 @@ autoescape=True)
 users_arr = []
 bots = []
 triggers=["die","dying","suicide","suicidal","kill","killing"]
+happy_synon=["happy","excited", "overjoyed","on cloud nine","jubilant","elated"]
+sad_synon=["sad","miserable","unhappy","depressed","heartbroken","crestfallen","too much"]
+mood=''
 
 class User():
     def __init__(self,name,position):
@@ -121,12 +124,31 @@ class GetResponse(webapp2.RequestHandler): #this gets the response fron user inp
 				#kernel.learn("std-startup.xml")
 				#kernel.respond("load aiml b")
 				#the above reading of files has been placed at the top
+				happy_counter=0
+				sad_counter=0
+
 				bot_resp = respond(user.nickname(),user_resp)
 
 				for trigger in triggers:
 					if trigger in user_resp:
 						bot_resp="I feel that your safety is being compromised, please speak to a counsellor"
-					
+				
+				for word in happy_synon:
+					if word in user_resp:
+						bot_resp="I'm very glad that you feel happy. We should always stay positive in life :)"
+						global mood
+						mood="happy"
+						happy_counter+=1
+						
+				for word in sad_synon:
+					if word in user_resp:
+						global mood
+						mood="sad"			
+						sad_counter+=1
+						bot_resp = respond(user.nickname(),"I am sad")
+
+				if happy_counter > 0 and sad_counter > 0:
+					bot_resp="Happy and sad are considered opposites...what made you happy and what made you sad?"
 				b = Log()
 				b.message = bot_resp
 				b.name = user.nickname()
@@ -200,8 +222,12 @@ class Quotes(webapp2.RequestHandler):
 		template_values = {
 		'url':url
 		}
-		template = JINJA_ENVIRONMENT.get_template('templates/quotes.html') #change the file to the relevant html file
-		self.response.write(template.render(template_values))
+		if mood=="happy":
+			template = JINJA_ENVIRONMENT.get_template('templates/happy.html') #change the file to the relevant html file
+			self.response.write(template.render(template_values))
+		else:
+			template = JINJA_ENVIRONMENT.get_template('templates/quotes.html') #change the file to the relevant html file
+			self.response.write(template.render(template_values))
 		
 class Profile(webapp2.RequestHandler):
 	

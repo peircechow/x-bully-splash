@@ -8,6 +8,9 @@
 <category><pattern> SAD</pattern><template>Why do you feel sad? Would you like to share what happened to you?</template></category>
 
 	<category><pattern>I * BULLIED</pattern><template><srai>BULLIED</srai></template></category>
+	<category><pattern>I * BULLIED *</pattern><template><srai>BULLIED</srai></template></category>
+	<category><pattern>* BULLIED</pattern><template><srai>BULLIED</srai></template></category>
+	<category><pattern> * BULLIED *</pattern><template><srai>BULLIED</srai></template></category>
 	<category><pattern>BEING BULLIED</pattern><template><srai>BULLIED</srai></template></category>
 	<category><pattern>BULLIED ME *</pattern><template><srai>BULLIED</srai></template></category>
 	<category><pattern>BULLIED</pattern><template>Would you like to share with me what happened to you?</template></category>
@@ -79,19 +82,25 @@
 				<category><pattern> NO </pattern><that>* IS YOUR SAFETY BEING COMPROMISED</that><template>In that case, do you still want to continue the relationship with him?</template></category>
 				<category><pattern>* NO </pattern><that>* IS YOUR SAFETY BEING COMPROMISED</that><template><srai>NO</srai></template></category>
 				<category><pattern> NO *</pattern><that>* IS YOUR SAFETY BEING COMPROMISED</that><template><srai>NO</srai></template></category>
+				<category><pattern> NOPE *</pattern><that>* IS YOUR SAFETY BEING COMPROMISED</that><template><srai>NO</srai></template></category>
+				<category><pattern> NOPE *</pattern><that>* IS YOUR SAFETY BEING COMPROMISED</that><template><srai>NO</srai></template></category>
+				<category><pattern> NOPE </pattern><that>* IS YOUR SAFETY BEING COMPROMISED</that><template><srai>NO</srai></template></category>
 
 					<category><pattern>CONTINUE RELATIONSHIP</pattern><template>I can advise you to approach him with the I-Message method, making you more assertive. "I feel (emotion) when you (action). I want (what you want him to do)". In this way, you will feel more assertive and be able to stand up for yourself :)</template></category>
-					<category><pattern> YES </pattern><that>IN THAT CASE, DO YOU STILL WANT TO CONTINUE THE RELATIONSHIP WITH HIM</that><template>I can advise you to approach him with the I-Message method, making you more assertive. "I feel (emotion) when you (action). I want (what you want him to do)". In this way, you will feel more assertive and be able to stand up for yourself :)</template></category>
-					<category><pattern>* YES </pattern><template><srai>CONTINUE RELATIONSHIP</srai></template></category>
-					<category><pattern> YES *</pattern><template><srai>CONTINUE RELATIONSHIP</srai></template></category>
+					<category><pattern> YES </pattern><that>* DO YOU STILL WANT TO CONTINUE THE RELATIONSHIP WITH HIM</that><template>I can advise you to approach him with the I-Message method, making you more assertive. "I feel (emotion) when you (action). I want (what you want him to do)". In this way, you will feel more assertive and be able to stand up for yourself :)</template></category>
+					<category><pattern>* YES </pattern><template><srai>YES</srai></template></category>
+					<category><pattern> YES *</pattern><template><srai>YES</srai></template></category>
+					<category><pattern>* CONTINUE RELATIONSHIP</pattern><template><srai>CONTINUE RELATIONSHIP</srai></template></category>
+					<category><pattern> * CONTINUE * RELATIONSHIP</pattern><template><srai>CONTINUE RELATIONSHIP</srai></template></category>
+					
 					
 					
 					<category><pattern>STOP RELATIONSHIP</pattern><template>I'm glad you've made up your mind. Perhaps you can try walking away from him :) Do not be suppressed by his actions. Stay strong and move on ! :D</template></category>					
-					<category><pattern> NO </pattern><that>IN THAT CASE, DO YOU STILL WANT TO CONTINUE THE RELATIONSHIP WITH HIM</that><template><srai>STOP RELATIONSHIP</srai></template></category>
-					<category><pattern> NO *</pattern><that>IN THAT CASE, DO YOU STILL WANT TO CONTINUE THE RELATIONSHIP WITH HIM</that><template><srai>STOP RELATIONSHIP</srai></template></category>
-					<category><pattern>* NO </pattern><that>IN THAT CASE, DO YOU STILL WANT TO CONTINUE THE RELATIONSHIP WITH HIM</that><template><srai>STOP RELATIONSHIP</srai></template></category>
+					<category><pattern> NO </pattern><that>* DO YOU STILL WANT TO CONTINUE THE RELATIONSHIP WITH HIM</that><template><srai>STOP RELATIONSHIP</srai></template></category>
+					<category><pattern> NO *</pattern><that>* DO YOU STILL WANT TO CONTINUE THE RELATIONSHIP WITH HIM</that><template><srai>STOP RELATIONSHIP</srai></template></category>
+					<category><pattern>* NO </pattern><that>* DO YOU STILL WANT TO CONTINUE THE RELATIONSHIP WITH HIM</that><template><srai>STOP RELATIONSHIP</srai></template></category>
 					
-					<category><pattern>*</pattern><template>Sorry, let me rephrase my question. Do you want to stop or continue the relationship?</template></category>		
+					<category><pattern>*</pattern><that>* DO YOU STILL WANT TO CONTINUE THE RELATIONSHIP WITH HIM</that><template>Sorry, let me rephrase my question. Do you want to stop or continue the relationship?</template></category>		
 					
 						<category><pattern>STOP</pattern><that>* STOP OR CONTINUE *</that><template><srai>STOP RELATIONSHIP</srai></template></category>
 						<category><pattern>* STOP</pattern><that>* STOP OR CONTINUE *</that><template><srai>STOP RELATIONSHIP</srai></template></category>	
@@ -163,6 +172,7 @@
 <category><pattern>* CREATED YOU</pattern><template><srai>CREATED YOU</srai></template></category> 
 
 
+
 <category><pattern>THANK YOU</pattern>
 <template>
 	<random> 
@@ -198,6 +208,29 @@
 </template>
 </category> 
 
+<category><pattern>IDK</pattern><template>It's ok. Take your time to think about it :)</template></category>
+<category><pattern>IDK *</pattern><template><srai>IDK</srai></template></category>
+<category><pattern>* IDK</pattern><template><srai>IDK</srai></template></category>
+<category><pattern>DUNNO</pattern><template><srai>IDK</srai></template></category>
+<category><pattern>* DUNNO</pattern><template><srai>IDK</srai></template></category>
+<category><pattern>DUNNO *</pattern><template><srai>IDK</srai></template></category>
+
+<category><pattern>OK</pattern><template>Yes, glad you agree with me</template></category> 
+<category><pattern>OK *</pattern><template>Yes, glad you agree with me</template></category> 
+
+<category><pattern>YES</pattern><template>Yes? What about it?</template></category> 
+<category><pattern>NO</pattern><template>No? What about it?</template></category> 
+
+<category><pattern>LOL</pattern><template>What's so funny about it? xD</template></category> 
+<category><pattern>LMFAO</pattern><template><srai>LOL</srai></template></category>
+<category><pattern>LEL</pattern><template><srai>LOL</srai></template></category>
+<category><pattern>LOLOLOL</pattern><template><srai>LOL</srai></template></category>
+<category><pattern>HAHAHA</pattern><template><srai>LOL</srai></template></category>
+
+
+<category><pattern>* posted * pictures *</pattern><template>It seems that this bullying is rather severe. Is your safety being compromised?</template></category>
+<category><pattern>* posted pictures *</pattern><template>It seems that this bullying is rather severe. Is your safety being compromised?</template></category>
+
 <category><pattern>*</pattern>
 <template>
 	<random> 
@@ -207,7 +240,10 @@
 	<li>Sorry, that wasn't clear enough</li>
 	<li>Sorry, I didnt quite catch that</li>
 	<li>I don't follow</li>	
+	<li>Why do you say so?</li>
 	</random>
 </template>
 </category>
+
+
 </aiml>

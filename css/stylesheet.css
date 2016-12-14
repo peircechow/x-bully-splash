@@ -190,6 +190,16 @@
 	padding-top:10px;
 	min-height:800px;	
 }
+
+#quote-happy{
+	padding-top:10px;
+	min-height:800px;	
+}
+#happy-background{
+	background-image:url("happy2.jpg");
+	background-repeat: no-repeat;
+
+}
 .scope-it{
 	padding-top:10px;
 	min-height:800px;
